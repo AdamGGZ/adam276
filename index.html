@@ -1,54 +1,19 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
-<html lang="en">
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Website HTML and CSS | CodingNepal</title>
+    <meta charset="utf-8">
+    <title>Download Button with Timer | CodingNepal</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts Links For Icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Link for Icons only -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a class="logo" href="#">VISHAL<span>.</span></a>
-        <ul class="menu-links">
-          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact us</a></li>
-        </ul>
-        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
-      </nav>
-    </header>
-
-    <section class="hero-section">
-      <div class="content">
-        <h2>Start Your Day With Fresh vISHAL'S Coffee</h2>
-        <p>
-         Vishal coffe is a popular and beloved beverage enjoyed by 
-          people around the world.Awaken your senses with a steaming cup of liquid motivation.
-        </p>
-        <button>
-          <li><a href="https://www.amazon.in/Nescafe-Blend-Espresso-Arabica-Coffee/dp/B0CGX2KJ9D/ref=sr_1_17?crid=1KUBYZRCAHW3I&dib=eyJ2IjoiMSJ9.3wOzlPW0RJJ6rZWhxqVs8ZgBohAIEDd5uVxlyiQ7Nf6c_DmSdprRwO7yhRy2DRAQOrzv7avYecQvANgEh8QtmGXAq8PN_cyY6EZcgoRP4BRwFRsgzWPDSvDeD3A0iQpt6ixPuz21IBVappOS7vqiyMbbuuEcG4SxKz_9tBd___hqH10k_ZJYgNJLBhIgcYH-Bn7EoPtotzHo6Hj3K_jFVosqWpSxU8rCmrM-hcZlp7Q4WgptpanSgebkdxPNMBftGKe2p7-QbtYjgf7dzpHI9H9VqRu29zSvF6ZBVga5lmE.25NDcmYmRCmbfClEb6qCg0Jc0K0kODT698GS-lPPvL4&dib_tag=se&keywords=generic+nescafe&qid=1710323674&sprefix=generic+nescaf%2Caps%2C207&sr=8-17">Order Now</a></li>
-        </button>
-      </div>
-    </section>
-
-    <script>
-      const header = document.querySelector("header");
-      const hamburgerBtn = document.querySelector("#hamburger-btn");
-      const closeMenuBtn = document.querySelector("#close-menu-btn");
-
-      // Toggle mobile menu on hamburger button click
-      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
-
-      // Close mobile menu on close button click
-      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
-    </script>
-    
+    <button class="download-btn" data-timer="10">
+      <span class="icon material-symbols-rounded">vertical_align_bottom</span>
+      <span class="text">Download Files</span>
+    </button>
   </body>
 </html>
