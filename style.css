@@ -1,174 +1,198 @@
-/* Importing Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-header {
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+}
+
+.header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
 }
 
-header .navbar {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px 15px;
 }
 
-.navbar .logo {
-  color: #fff;
-  font-weight: 600;
-  font-size: 2.1rem;
+.navbar .logo a {
+  font-size: 1.8rem;
   text-decoration: none;
+  color: #fff;
 }
 
-.navbar .logo span {
-  color: #C06B3E;
-}
-
-.navbar .menu-links {
+.navbar .links {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 35px;
 }
 
-.navbar a {
-  color: #fff;
+.navbar .links a {
+  font-weight: 500;
   text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
   transition: 0.2s ease;
 }
 
-.navbar a:hover {
-  color: #C06B3E;
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+
+.navbar .buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons a:not(:last-child) {
+  margin-right: 30px;
+}
+
+.navbar .buttons .signin:hover {
+  color: #47b2e4;
+}
+
+.navbar .buttons .signup {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.navbar .buttons .signup:hover {
+  background-color: #47b2e4;
+  color: #fff;
 }
 
 .hero-section {
-  height: 100vh;
-  background-image: url("https://www.codingnepalweb.com/demos/create-responsive-coffee-website-html-css/hero-bg.jpg");
-  background-position: center;
-  background-size: cover;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 0 20px;
-}
-
-.hero-section .content {
+  height: 95vh;
+  padding: 0 15px;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+}
+
+.hero-section .hero {
+  max-width: 50%;
   color: #fff;
 }
 
-.hero-section .content h2 {
-  font-size: 3rem;
-  max-width: 600px;
-  line-height: 70px;
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.hero-section .content p {
-  font-weight: 300;
-  max-width: 600px;
-  margin-top: 15px;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #c9c7c7;
 }
 
-.hero-section .content button {
-  background: #fff;
-  padding: 12px 30px;
-  border: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  margin-top: 38px;
-  cursor: pointer;
-  font-weight: 500;
+.hero-section .img img {
+  width: 517px;
+}
+
+.hero-section .buttons {
+  margin-top: 40px;
+}
+
+.hero-section .buttons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0.375rem;
+  font-weight: 600;
   transition: 0.2s ease;
+  display: inline-block;
 }
 
-.hero-section .content button:hover {
-  color: #fff;
-  background: #C06B3E;
+.hero-section .buttons a:not(:last-child) {
+  margin-right: 15px;
 }
 
-#close-menu-btn {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  cursor: pointer;
+.buttons .join {
+  background-color: #47b2e4;
+}
+
+.hero-section .buttons .learn {
+  border: 1px solid #fff;
+  border-radius: 0.375rem;
+}
+
+.hero-section .buttons a:hover {
+  background-color: #47b2e4;
+}
+
+/* Hamburger menu styles */
+#menu-toggle {
   display: none;
 }
 
 #hamburger-btn {
+  font-size: 1.8rem;
   color: #fff;
   cursor: pointer;
   display: none;
+  order: 1;
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 10px;
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
   }
 
-  header.show-mobile-menu::before {
-    content: "";
+  .links {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: -100%;
+    top: 75px;
     width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
+    height: 100vh;
+    padding-top: 50px;
+    background: #175d69;
+    flex-direction: column;
+    transition: 0.3s ease;
   }
 
-  .navbar .logo {
-    font-size: 1.7rem;
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
   }
 
-    
-  #hamburger-btn, #close-menu-btn {
+  .navbar #hamburger-btn {
     display: block;
   }
 
-  .navbar .menu-links {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: #fff;
-    flex-direction: column;
-    padding: 70px 40px 0;
-    transition: left 0.2s ease;
+  .header .buttons {
+    display: none;
   }
 
-  header.show-mobile-menu .navbar .menu-links {
-    left: 0;
-  }
-
-  .navbar a {
-    color: #000;
-  }
-
-  .hero-section .content {
+  .hero-section .hero {
+    max-width: 100%;
     text-align: center;
   }
 
-  .hero-section .content :is(h2, p) {
-    max-width: 100%;
-  }
-
-  .hero-section .content h2 {
-    font-size: 2.3rem;
-    line-height: 60px;
-  }
-  
-  .hero-section .content button {
-    padding: 9px 18px;
+  .hero-section img {
+    display: none;
   }
 }
